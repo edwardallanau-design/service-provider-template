@@ -1,0 +1,44 @@
+/*
+ * brand.css — Edit this file per client to customize the design system.
+ * Swap font variables, adjust the colour palette hue/chroma, tweak radius.
+ * Everything else (layout, components) inherits from these tokens.
+ */
+
+@theme {
+  /* ── Fonts ─────────────────────────────────────────────────────── */
+  /* Replace var(--font-geist-sans) with any next/font variable      */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, 'Courier New', monospace;
+
+  /* ── Monochromatic Palette (black → grey → white) ───────────────
+   * All values use oklch(lightness% chroma hue)
+   * Set chroma=0 and hue=0 for pure greyscale.
+   * Add a tiny chroma (0.005–0.01) to tint towards warm or cool.   */
+  --color-background:     oklch(4%  0 0);   /* near-black page bg   */
+  --color-surface:        oklch(9%  0 0);   /* card / panel bg      */
+  --color-surface-raised: oklch(14% 0 0);   /* elevated / hover bg  */
+  --color-border:         oklch(22% 0 0);   /* subtle dividers      */
+  --color-muted:          oklch(50% 0 0);   /* dim / placeholder    */
+  --color-foreground:     oklch(97% 0 0);   /* primary text (white) */
+  --color-on-light:       oklch(8%  0 0);   /* dark text on white   */
+
+  /* Section background alternates */
+  --color-section-dark:   oklch(4%  0 0);   /* darkest sections     */
+  --color-section-mid:    oklch(9%  0 0);   /* mid-dark sections    */
+  --color-section-light:  oklch(97% 0 0);   /* white sections       */
+
+  /* Accent — pure white highlight / underline effects */
+  --color-accent:         oklch(97% 0 0);
+  --color-accent-dim:     oklch(65% 0 0);
+
+  /* ── Typography scale ───────────────────────────────────────── */
+  --text-hero:    clamp(3rem, 6vw, 5.5rem);
+  --text-display: clamp(2rem, 4vw, 3.25rem);
+  --text-title:   clamp(1.5rem, 2.5vw, 2rem);
+
+  /* ── Border radius ─────────────────────────────────────────── */
+  --radius-card:   0.75rem;
+  --radius-button: 0.375rem;
+  --radius-sm:     0.25rem;
+}
